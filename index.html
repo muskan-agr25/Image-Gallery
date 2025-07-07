@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Gallery with Lightbox</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('MNC')">MNC's</button>
+    <button onclick="filterImages('Food')">Food</button>
+  </div>
+
+  <div class="gallery">
+    <div class="image-item" data-category="nature">
+      <img src="images/natureimg1.webp" alt="Nature 1" onclick="openLightbox(0)">
+    </div>
+    <div class="image-item" data-category="MNC">
+      <img src="images/MyLoveimg12.jpeg" alt="MNC" onclick="openLightbox(1)">
+    </div>
+    <div class="image-item" data-category="city">
+      <img src="images/cityimg1.jpeg" alt="City " onclick="openLightbox(2)">
+    </div>
+    <div class="image-item" data-category="MNC">
+      <img src="images/MyLoveimg1.jpeg" alt="MNC" onclick="openLightbox(3)">
+    </div>
+    <div class="image-item" data-category="city">
+      <img src="images/cityimg2.jpeg" alt="City " onclick="openLightbox(4)">
+    </div>
+     <div class="image-item" data-category="MNC">
+      <img src="images/MyLoveimg3.jpeg" alt="MNC" onclick="openLightbox(5)">
+    </div>
+    
+    <div class="image-item" data-category="nature">
+      <img src="images/natureimg2.jpg" alt="Nature 2" onclick="openLightbox(6)">
+    </div>
+    <div class="image-item" data-category="MNC">
+      <img src="images/MyLoveimg11.jpeg" alt="MNC" onclick="openLightbox(7)">
+    </div>
+    
+    <div class="image-item" data-category="nature">
+      <img src="images/natureimg3.jpeg" alt="Nature3" onclick="openLightbox(8)">
+    </div>
+   
+    <div class="image-item" data-category="MNC">
+      <img src="images/MyLoveimg10.jpeg" alt="MNC" onclick="openLightbox(9)">
+    </div>
+    
+    <div class="image-item" data-category="MNC">
+      <img src="images/MyLoveimg2.jpeg" alt="MNC" onclick="openLightbox(10)">
+    </div>
+    <div class="image-item" data-category="city">
+      <img src="images/cityimg3.jpeg" alt="City " onclick="openLightbox(11)">
+    </div>
+    <div class="image-item" data-category="Food">
+      <img src="images/food4.jpeg" alt="food" onclick="openLightbox(12)">
+    </div>
+    <div class="image-item" data-category="MNC">
+      <img src="images/MyLoveimg4.jpeg" alt="MNC" onclick="openLightbox(13)">
+    </div>
+    <div class="image-item" data-category="MNC">
+      <img src="images/MyLoveimg5.jpeg" alt="MNC" onclick="openLightbox(14)">
+    </div>
+  
+    <div class="image-item" data-category="Food">
+      <img src="images/food3.jpeg" alt="food" onclick="openLightbox(15)">
+    </div>
+    
+
+    <div class="image-item" data-category="MNC">
+      <img src="images/MyLoveimg6.jpeg" alt="MNC" onclick="openLightbox(16)">
+    </div>
+
+
+    <div class="image-item" data-category="Food">
+      <img src="images/food6.jpeg" alt="food" onclick="openLightbox(17)">
+    </div>
+     <div class="image-item" data-category="nature">
+      <img src="images/natureimg4.jpeg" alt="Nature4" onclick="openLightbox(18)">
+    </div>
+   
+    <div class="image-item" data-category="Food">
+      <img src="images/food8.jpeg" alt="food" onclick="openLightbox(19)">
+    </div>
+
+
+    
+    <div class="image-item" data-category="MNC">
+      <img src="images/MyLoveimg7.jpeg" alt="MNC" onclick="openLightbox(20)">
+    </div>
+     <div class="image-item" data-category="city">
+      <img src="images/cityimg4.jpeg" alt="City " onclick="openLightbox(21)">
+    </div>
+   
+    <div class="image-item" data-category="MNC">
+      <img src="images/MyLoveimg8.jpeg" alt="MNC" onclick="openLightbox(22)">
+    </div>
+
+    <div class="image-item" data-category="Food">
+      <img src="images/food1.jpeg" alt="food" onclick="openLightbox(23)">
+    </div>
+    
+    <div class="image-item" data-category="Food">
+      <img src="images/food2.jpeg" alt="food" onclick="openLightbox(24)">
+    </div>
+    
+    
+    
+    <div class="image-item" data-category="Food">
+      <img src="images/food7.jpeg" alt="food" onclick="openLightbox(25)">
+    </div>
+    
+    <div class="image-item" data-category="Food">
+      <img src="images/food5.jpeg" alt="food" onclick="openLightbox(26)">
+    </div>
+    
+    
+    <div class="image-item" data-category="Food">
+      <img src="images/food9.jpeg" alt="food" onclick="openLightbox(27)">
+    </div>
+     <div class="image-item" data-category="nature">
+      <img src="images/natureimg5.jpeg" alt="Nature4" onclick="openLightbox(28)">
+    </div>
+    <div class="image-item" data-category="nature">
+      <img src="images/natureimg6.jpg" alt="Nature4" onclick="openLightbox(29)">
+    </div>
+    <div class="image-item" data-category="nature">
+      <img src="images/natureimg7.webp" alt="Nature4" onclick="openLightbox(30)">
+    </div>
+   
+    
+  </div>
+
+ <!-- lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+    <div class="nav">
+      <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+      <span class="next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
